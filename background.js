@@ -1,4 +1,4 @@
-urlList = ["https://www.youtube.com"];
+urlList = ["https://www.youtube.com/shorts"];
 
 function urlIsMatching(urlToCheck) {
     return urlList.some((elt) => urlToCheck.includes(elt));
