@@ -1,0 +1,16 @@
+{
+    "name": "Chrome Blocker",
+    "manifest_version": 3,
+    "version": "1.0",
+    "description": "Block websites on Chrome",
+    "permissions": [
+        "tabs","activeTab","scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ]
+}
