@@ -9,11 +9,13 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     console.log("tab url updated", tab.url);
         if (urlIsMatching(tab.url)) {
             console.log("URL matched, hiding page");
-        chrome.scripting.insertCSS({
+        chrome.scripting.executeScript({
             target:  {
                 tabId: tab.id,
               },
-            css: `body { display: none; }`
+            func: () => {
+                document.body.innerHTML = "<h1>Shorts are bad !! Je t'avais dit quoi ZEyd!!</h1>";
+            }
         });
         
     }
